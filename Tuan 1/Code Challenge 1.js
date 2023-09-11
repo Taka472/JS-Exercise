@@ -12,4 +12,4 @@ function markHigherBMI(mass1, height1, mass2, height2) {
     return false;
 }
 
-console.log(markHigherBMI(78, 1.69, 92, 1.95));
+console.log(markHigherBMI(95, 1.88, 85, 1.76));
