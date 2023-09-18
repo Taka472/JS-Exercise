@@ -1,14 +1,14 @@
 var url = "https://my-json-server.typicode.com/typicode/demo/posts";
+
 var xhr = new XMLHttpRequest();
-xhr.open("DELETE", url + "/2", true);
-xhr.setRequestHeader("Conten-type", "application/json;charset=utf-8");
+xhr.open("DELETE", url + "/1", true);
 xhr.onload = function() {
     var user = JSON.parse(xhr.responseText);
     if (xhr.readyState == 4 && xhr.status == "200") {
-        console.table(users);
+        console.table(user);
     } else {
-        console.error(users);
+        console.error(user);
     }
 }
 
-xhr.send(json);
+xhr.send(null);
