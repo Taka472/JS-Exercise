@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import { Entypo} from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
-export default function App(props) {
+export default function Screen2(props) {
   const { count } = props;
   const DATA = [
     {
@@ -27,7 +27,10 @@ export default function App(props) {
       id: 5,
       img: "carbusbtops2 1.png",
     },
-    { id: 6, img: "daucam 1.png" },
+    { 
+      id: 6, 
+      img: "daucam 1.png" 
+    }
   ];
 
   const Item = ({obj}) => (

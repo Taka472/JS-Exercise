@@ -3,12 +3,11 @@ import React from 'react';
 import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 
-export default function App() {
+export default function Screen1() {
   const [images, setImages] = useState([]);
   
   return (
    <SafeAreaView style={styles.container}>
-      {/* tiêu đề 1 */}
         <View style={{flexDirection:'row',backgroundColor:  '#1BA9FF', padding: 10,width:415,height:45,position:'fixed'}}>
             <Text style={{width: '35.68px',
             height: '12.16px',
@@ -20,7 +19,7 @@ export default function App() {
                  <Image style={styles.itemImg} source={require('../assets/arrow.png')} />
                  <Image style={styles.itemImg1} source={require('../assets/bi_cart.png')} />
             </View> 
-            {/* danh sách sản phẩm       */}
+
             <ScrollView>
             <Image style={styles.itemImg2} source={require('../assets/1.png')} />
             <View style={styles.View1}> 
@@ -100,7 +99,7 @@ export default function App() {
                 </TouchableOpacity>
                 </View>
             </ScrollView>
-            {/* tiêu đề 3 */}
+
             <View style={{flexDirection:'row',backgroundColor:  '#1BA9FF', padding: 10,width:415,height:65,position:'fixed',top:800}}>
             <Image style={{width:40,height:40,top:2,left:170}} source={{uri:'https://img.icons8.com/fluency-systems-regular/48/home--v1.png'}} />
             <Image style={{width:40,height:40,top:2,left:-50}} source={{uri:'https://img.icons8.com/ios-glyphs/30/menu--v1.png'}} />
