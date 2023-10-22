@@ -6,7 +6,6 @@ import { Entypo} from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 export default function App(props) {
   const { count } = props;
-  // tao mảng
   const DATA = [
     {
       id: 1,
@@ -30,8 +29,8 @@ export default function App(props) {
     },
     { id: 6, img: "daucam 1.png" },
   ];
-  // tạo item
-  const Item = ({ obj}) => (
+
+  const Item = ({obj}) => (
     <TouchableOpacity>
     <View style={styles.items}>
     <View style={styles.item}>
@@ -54,17 +53,16 @@ export default function App(props) {
             fontSize: 12,
             paddingLeft: 35,
           }}
-        >
-          -39%
+        > -39%
         </Text>
       </View>
     </View>
   </View>
   </TouchableOpacity>
   );
+
   return (
         <SafeAreaView >
-          {/* tiêu đề 1 */}
          <View style={{flexDirection:'row',backgroundColor:  '#1BA9FF', padding: 10,width:415,height:45,position:'fixed'}}>
             <Text style={{width: '35.68px',
             height: '12.16px',
@@ -83,14 +81,14 @@ export default function App(props) {
                  <Image style={styles.itemImg1} source={require('../assets/bi_cart.png')} />
                  <Image style={styles.itemImg3} source={require('../assets/3cham.png')} />
             </View> 
-            {/* định dạng danh sách sản phẩm */}
+
             <FlatList
           data={DATA}
           numColumns={2}
           renderItem={({ item }) => <Item obj={item}></Item>}
           keyExtractor={(item) => item.id}
         ></FlatList>
-        {/* tiêu đề 2 */}
+
             <View style={{flexDirection:'row',backgroundColor:  '#1BA9FF', padding: 10,width:415,height:65,position:'fixed',top:800}}>
             <Image style={{width:40,height:40,top:2,left:170}} source={{uri:'https://img.icons8.com/fluency-systems-regular/48/home--v1.png'}} />
             <Image style={{width:40,height:40,top:2,left:-50}} source={{uri:'https://img.icons8.com/ios-glyphs/30/menu--v1.png'}} />
